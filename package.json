@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "nodemon src/app.ts",
     "build": "npx tsc",
-    "start":"node build/app.js"
-
+    "start": "node build/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/Raxile/node-template#readme",
   "description": "",
   "dependencies": {
+    "concurrently": "^9.1.2",
     "express": "^4.21.2"
   },
   "devDependencies": {
