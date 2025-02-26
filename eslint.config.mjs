@@ -30,4 +30,5 @@ export default [
         },
     },
     eslintConfigPrettier,
+    { ignores: ['node_modules/', 'build/', 'dist/'] },
 ]
