@@ -1,8 +1,9 @@
+import 'dotenv/config'
 import express, { Express, Request, Response } from 'express'
 
 const app: Express = express()
 
-const port = 3000
+const port = process.env.PORT
 app.get('/', (req: Request, res: Response) => {
     res.send('hello world2!')
 })
