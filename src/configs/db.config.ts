@@ -4,7 +4,10 @@ const connectDB = async (): Promise<void> => {
     try {
         const dbUrl =
             process.env.MONGO_DB_URL || 'mongodb://localhost:27017/defaultDB'
-        await mongoose.connect(dbUrl)
+        await mongoose.connect(dbUrl, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        } as mongoose.ConnectOptions)
         console.log('✅ Database connected successfully')
     } catch (error) {
         console.log('❌ Database connection failed:', error)
